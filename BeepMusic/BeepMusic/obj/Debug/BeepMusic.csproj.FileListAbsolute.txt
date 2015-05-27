@@ -1,0 +1,6 @@
+C:\Projects\BeepMusic\BeepMusic\bin\Debug\BeepMusic.exe.config
+C:\Projects\BeepMusic\BeepMusic\bin\Debug\BeepMusic.exe
+C:\Projects\BeepMusic\BeepMusic\bin\Debug\BeepMusic.pdb
+C:\Projects\BeepMusic\BeepMusic\obj\Debug\BeepMusic.csprojResolveAssemblyReference.cache
+C:\Projects\BeepMusic\BeepMusic\obj\Debug\BeepMusic.exe
+C:\Projects\BeepMusic\BeepMusic\obj\Debug\BeepMusic.pdb
