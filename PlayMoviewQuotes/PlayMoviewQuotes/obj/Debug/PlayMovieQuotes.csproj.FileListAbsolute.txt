@@ -4,3 +4,9 @@ C:\Projects\PlayMoviewQuotes\PlayMoviewQuotes\bin\Debug\PlayMoviewQuotes.pdb
 C:\Projects\PlayMoviewQuotes\PlayMoviewQuotes\obj\Debug\PlayMoviewQuotes.exe
 C:\Projects\PlayMoviewQuotes\PlayMoviewQuotes\obj\Debug\PlayMoviewQuotes.pdb
 C:\Projects\PlayMoviewQuotes\PlayMoviewQuotes\obj\Debug\PlayMovieQuotes.csprojResolveAssemblyReference.cache
+C:\Projects\Camping\PlayMoviewQuotes\PlayMoviewQuotes\bin\Debug\PlayMoviewQuotes.exe.config
+C:\Projects\Camping\PlayMoviewQuotes\PlayMoviewQuotes\obj\Debug\PlayMoviewQuotes.exe
+C:\Projects\Camping\PlayMoviewQuotes\PlayMoviewQuotes\obj\Debug\PlayMoviewQuotes.pdb
+C:\Projects\Camping\PlayMoviewQuotes\PlayMoviewQuotes\bin\Debug\PlayMoviewQuotes.exe
+C:\Projects\Camping\PlayMoviewQuotes\PlayMoviewQuotes\bin\Debug\PlayMoviewQuotes.pdb
+C:\Projects\Camping\PlayMoviewQuotes\PlayMoviewQuotes\obj\Debug\PlayMovieQuotes.csprojResolveAssemblyReference.cache
