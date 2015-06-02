@@ -1,0 +1,28 @@
+<html>
+<body>
+<div class="lesson incomplete" onclick="test()">Hello</div>
+<br>
+<br>
+<div class="lesson incomplete" onclick="test2()"> Hello2!</div>
+<br>
+<br>
+<div class="lesson incomplete" onclick="test3()"> Hello3!</div>
+<script type="text/javascript" >
+	function test(){window.location.replace = "http://stackoverflow.com";}
+	function test2(){window.location.href = "http://google.com";}
+	function test3(){window.location.href = "http://reddit.com";}
+	var index;
+    var thing = document.getElementsByClassName("lesson incomplete");
+	for(index = 0; index < thing.length; ++index)
+	{
+		thing[index].onclick = (function()
+		{
+			var oldClick = this.getAttribute("onclick");
+			var win = window.open("index.html", "_blank");
+			win.focus();
+			//console.log(oldClick);
+		})
+	}
+</script>
+</body>
+</html>
