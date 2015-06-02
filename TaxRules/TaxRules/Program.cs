@@ -22,8 +22,9 @@ namespace TaxRules
             Console.WriteLine("Enter the price of your item:");
             double cost = Convert.ToDouble(Console.ReadLine());
             Transaction trans = new Transaction(fname, lname,age, dt, cost);
-            Console.WriteLine("Your effective tax on {0} for {1} {2} who is {3} years old is {4:C}", rawDate, fname, lname, age, trans.Calculate());
-            Console.WriteLine("This totals to a final amount of {0:C} . Thank you for shopping with us!", trans.Calculate()+cost );
+            var tax = trans.Calculate();
+            Console.WriteLine("Your effective tax on {0} for {1} {2} who is {3} years old is {4:C}", rawDate, fname, lname, age, tax);
+            Console.WriteLine("This totals to a final amount of {0:C} . Thank you for shopping with us!", tax+cost );
             Console.Read();
         }
     }
