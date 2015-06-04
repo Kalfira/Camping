@@ -26,5 +26,12 @@ namespace MVCIntro.Controllers
 
             return View();
         }
+
+        public ActionResult Test(string entry)
+        {
+            ViewBag.Message = entry;
+
+            return View();
+        }
     }
 }

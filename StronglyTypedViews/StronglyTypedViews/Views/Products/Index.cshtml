@@ -1,0 +1,14 @@
+﻿@using StronglyTypedViews.Models
+@model StronglyTypedViews.Models.IndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach (Product product in Model.Products)
+    {
+        <li>Name: @product.Name, Price: @product.Price</li><br/>
+    }
+</ul>

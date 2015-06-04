@@ -14,6 +14,12 @@ namespace MVCIntro
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Catching",
+                url: "test/{*entry}",
+                defaults: new { controller= "Catching", action = "Test"}
+                );
+
+            routes.MapRoute(
                 name: "BlogByDate",
                 url: "blog/{temp}/{entryDate}",
                 defaults: new { controller = "blog", action = "GetEntryByDate"},

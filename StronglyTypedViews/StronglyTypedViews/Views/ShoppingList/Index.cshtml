@@ -1,0 +1,21 @@
+﻿@using StronglyTypedViews.Models
+@model StronglyTypedViews.Models.ShoppingListService
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (Customer cust in Model.Customers)
+{
+    <div>
+        @cust.LastName , @cust.FirstName is buying:
+        <ul>
+            @foreach (Product prod in cust.ListOfProducts)
+            {
+                <li>@prod.Name at @prod.Price</li>
+            }
+        </ul>
+        For a total of: $@ShoppingListService.GetTotal(cust.ListOfProducts)
+    </div>
+}
