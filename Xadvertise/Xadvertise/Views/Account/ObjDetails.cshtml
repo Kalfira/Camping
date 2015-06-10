@@ -1,0 +1,36 @@
+﻿@model Xadvertise.Models.Account
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h1>Account Information</h1>
+    <div>
+        <div>
+            <h4>Account ID: </h4>@Model.AccountId
+        </div>
+        <div>
+            <h4>Company Name: </h4>@Model.CompanyName
+        </div>
+        <div>
+            <h4>Manager: </h4>@Model.Manager
+        </div>
+        <div>
+            <h4>Contact Info: </h4>@Model.ManagerContact
+        </div>
+        <div>
+            <h4>Start Date: </h4>@Model.StartDate
+        </div>
+        <div>
+            <h4>Cost: </h4>@Model.Cost
+        </div>
+    </div>
+
+</div>
+<br />
+<br />
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccountId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

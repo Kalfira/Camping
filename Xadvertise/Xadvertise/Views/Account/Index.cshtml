@@ -1,0 +1,34 @@
+﻿@using Xadvertise.Controllers
+@model List<Xadvertise.Models.Account>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manager)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AccountId }, new { @class = "btn btn-default" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AccountId }, new { @class = "btn btn-default" }) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.AccountId}, new {@class="btn btn-default"})
+            </td>
+        </tr>
+    }
+</table>
+
+@using (Html.BeginForm("Add", "Account", FormMethod.Get))
+{
+    <input type="submit" value="Add"/>
+}
