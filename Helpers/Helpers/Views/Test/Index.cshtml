@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@ViewBag.Message
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Name", "Product Name:")
+        @Html.TextBox("Name")
+    </div>
+    <div>
+        @Html.Label("Second Number", "Second Number:")
+        @Html.TextBox("Second Number")
+    </div>
+    <div>
+        @Html.DropDownList("List",)
+    </div>
+    <input type="submit" value="Add Product"/>
+}
