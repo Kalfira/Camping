@@ -39,8 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TeamServices.cs" />
+    <Compile Include="AutoMapperStartup.cs" />
+    <Compile Include="IProductService.cs" />
+    <Compile Include="NinjectStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FourLayer.Domain\FourLayer.Domain.csproj">
+      <Project>{a4bba6f8-da10-4e21-84e3-bdb51697d50b}</Project>
+      <Name>FourLayer.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FourLayer.Infrastructure.Persistence\FourLayer.Infrastructure.Persistence.csproj">
+      <Project>{e60564a7-79d7-459e-9dcc-8032f5e8564d}</Project>
+      <Name>FourLayer.Infrastructure.Persistence</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

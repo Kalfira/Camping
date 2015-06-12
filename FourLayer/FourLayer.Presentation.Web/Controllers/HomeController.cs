@@ -8,6 +8,7 @@ namespace FourLayer.Presentation.Web.Controllers
 {
     public class HomeController : Controller
     {
+        IProductService
         public ActionResult Index()
         {
             return View();
