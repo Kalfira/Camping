@@ -8,7 +8,7 @@ using Template.Services.Models;
 
 namespace Template.Services
 {
-    class ItemService : IItemService
+    public class ItemService : IItemService
     {
         private IGenericRepository _repo;
         public ItemService(IGenericRepository repo)

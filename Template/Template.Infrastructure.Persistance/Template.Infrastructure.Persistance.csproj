@@ -51,13 +51,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ItemsDbContext.cs" />
-    <Compile Include="MyConfiguration.cs" />
+    <Compile Include="Migrations\201506180207421_Init.cs" />
+    <Compile Include="Migrations\201506180207421_Init.Designer.cs">
+      <DependentUpon>201506180207421_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506180225536_New.cs" />
+    <Compile Include="Migrations\201506180225536_New.Designer.cs">
+      <DependentUpon>201506180225536_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\RepositoryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <EmbeddedResource Include="Migrations\201506180207421_Init.resx">
+      <DependentUpon>201506180207421_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506180225536_New.resx">
+      <DependentUpon>201506180225536_New.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
