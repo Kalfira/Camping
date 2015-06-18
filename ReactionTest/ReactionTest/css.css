@@ -1,0 +1,11 @@
+﻿body{
+	font-family: Verdana;
+}
+
+#box{
+	width:200px;
+	height:200px;
+	display: none;
+	border-radius: 100%;
+	position: relative;
+}

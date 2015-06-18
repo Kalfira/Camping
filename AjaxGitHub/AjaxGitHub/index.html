@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<div id="form">
+    <form>
+        Enter GitHub user you want to lookup:<br/>
+        <input type="text" name="user"/>
+        <input type="button" onclick=GetGit() value="Lookup">
+    </form>
+</div>
+<div id="results" style="visibility:hidden">
+    <table style="border: 1px solid black; text-align: center">
+        <tr >
+            <th>Repo Name</th>
+            <th>Language</th>
+        </tr>
+        <tbody id="result">
+            
+        </tbody>
+    </table>
+</div>
+
+<script src="Scripts/jquery-2.1.4.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
