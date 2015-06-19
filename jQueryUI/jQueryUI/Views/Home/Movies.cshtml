@@ -1,0 +1,29 @@
+﻿@model IEnumerable<jQueryUI.Models.Movie>
+@{
+    ViewBag.Title = "Movies";
+}
+<div id="movieList">
+    <div style="background-color: blue; height: 100px; width: 100px; text-align: center; line-height: 100px" id="blue"><em style="color: white;">Blue</em></div>
+    <div style="background-color: red; height: 100px; width: 100px; text-align: center; line-height: 100px" id="red"><em style="color: white;">Red</em></div>
+    <div style="background-color: green; height: 100px; width: 100px; text-align: center; line-height: 100px" id="green"><em style="color: white;">Green</em></div>
+</div>
+
+@section scripts {
+    <script>
+
+
+        $('#movieList').sortable({
+            update: function (e, ui) {
+                var order = $(this).sortable('toArray');
+                $.ajax({
+                    data: JSON.stringify(order),
+                    type: 'POST',
+                    url: '/Home/saveOrder',
+                    contentType: "application/json",
+                    dataType: "json"
+                });
+            }
+        }).disableSelection();
+
+    </script>
+}

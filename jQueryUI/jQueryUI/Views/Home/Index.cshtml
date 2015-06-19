@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<form>
+    Product: <input id="product" />
+</form>
+
+@section scripts {
+    <script>
+    $("#product").autocomplete({
+        source: "/Home/find",
+        minLength: 1
+    });
+
+    </script>
+
+}
