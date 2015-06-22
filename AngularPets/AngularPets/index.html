@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="PetsApp">
+<head>
+    <title>Pets</title>
+</head>
+<body ng-controller="PetsController as petList" ng-cloak>
+    <h2>Dogs</h2>
+    <ul>
+        <li ng-repeat="dog in petList.dogs">
+            {{dog.name}}:<br />
+            <img height="25%" width="25%" ng-src="{{dog.picture}}" />
+        </li>
+    </ul>
+<h2>Bunnies</h2>
+    <ul>
+        <li ng-repeat="bunny in petList.bunnies">
+            {{bunny.name}}:<br />
+            <img height="25%" width="25%" ng-src="{{bunny.picture}}" />
+        </li>
+    </ul>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>

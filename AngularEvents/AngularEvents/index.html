@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title>Favorite Color</title>
+</head>
+<body ng-controller="FavoriteController as favorite">
+    <button ng-click="favorite.pickColor('Red')">Red</button>
+    <button ng-click="favorite.pickColor('Green')">Green</button>
+    <button ng-click="favorite.pickColor('Blue')">Blue</button>
+    <h2>Your favorite color is:</h2>
+    <div id="result" style="text-align:center;line-height:150px; color: white; height: 150px; width: 150px;">
+        <em><b><output>{{favorite.color}}</output></b></em>
+    </div>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>

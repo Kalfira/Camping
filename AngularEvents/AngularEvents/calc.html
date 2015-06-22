@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Calc">
+<head>
+    <title>Calculator</title>
+</head>
+<body ng-controller="CalcController">
+    <div id="num1">
+        First Number:
+        <input ng-model="first" />
+    </div>
+<div id="num2">
+    Second Number
+    <input ng-model="second"/>
+</div>
+    <button ng-click="Sum()">Sum</button>
+<div id="total">
+    {{result}}
+</div>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="app/calc.js"></script>
+</body>
+</html>

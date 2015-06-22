@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MovieApp">
+<head>
+    <title>Movies</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body ng-controller="MovieListController as movieList" ng-cloak>
+    <h2>Movies</h2>
+    <ul>
+        <li ng-repeat="movie in movieList.movies">{{movie.title}}</li>
+    </ul>
+
+    <!--<script src="Scripts/angular.min.js"></script>
+    <script src="app/app.js"></script>-->
+</body>
+</html>
