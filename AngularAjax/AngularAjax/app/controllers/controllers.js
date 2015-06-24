@@ -28,7 +28,7 @@
         function add() {
             var food = { name: vm.name };
             $http.post('/api/food', food)
-                .success(function() {
+                .success(function(id) {
                     console.log(id);
                 }).error(function(data) {
                     console.log(data);
