@@ -1,10 +1,8 @@
-﻿using System;
+﻿using AngularAjax.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using AngularAjax.Models;
 
 namespace AngularAjax.Controllers.api
 {
@@ -28,12 +26,13 @@ namespace AngularAjax.Controllers.api
         {
             if (ModelState.IsValid)
             {
-                //Save food to DB
+                //Save the food to the database
 
-                return Ok(5);
+                return Ok(new { Name = food.Name, Id = 5 });
             }
             else
             {
+
                 return BadRequest(ModelState);
             }
         }

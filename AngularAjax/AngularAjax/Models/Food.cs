@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AngularAjax.Models
 {
     public class Food
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Food Name is required fool")]
         public string Name { get; set; }
     }
 }
