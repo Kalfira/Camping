@@ -1,22 +1,27 @@
 ﻿(function () {
     angular.module('NicksCafe')
         .controller('WelcomeController', WelcomeController)
-        .controller('MenuController', MenuController)
-        .controller('AddController', AddController);
+        .controller('AddController', AddController)
+        .controller('MenuController',  MenuController);
 
     function WelcomeController() {
         var vm = this;
         vm.message = "Welcome page!";
     }
 
-    function MenuController(menuService) {
+    function MenuController($http, menuService) {
         var vm = this;
         vm.message = "Menu page!";
-        vm.menuItems = menuService.getProducts();
+        function getResults (result) {
+            console.log(result);
+            vm.menuItems = result;
+        }
+        menuService.getProducts($http, getResults);
 
     }
 
-    function AddController(menuService, $location) {
+
+    function AddController(menuService, $location, $http) {
         var vm = this;
         vm.message = "Add page!";
 
@@ -27,8 +32,11 @@
                 description: vm.description,
                 isBreakfast: vm.isBreakfast ? vm.isBreakfast : false
             };
-            menuService.addProduct(product);
-            $location.path('/menu');
+            var thing = $http;
+            function Reload() {
+                $location.path('/menu');
+            }
+            menuService.addProduct($http, product, Reload);
 
         }
     }
