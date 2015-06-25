@@ -1,11 +1,13 @@
 ﻿<h1>This is the {{vm.message}}</h1>
+<div ng-disabled="vm.isPosting">
+    <form novalidate ng-submit="vm.addItem()">
+        <input ng-model="vm.name" placeholder="Name" />
+        <input ng-model="vm.price" placeholder="Price" />
+        <input ng-model="vm.description" placeholder="Description" />
+        Is this on the breakfast menu?
+        <input ng-model="vm.isBreakfast" type="checkbox" />
 
-<form novalidate ng-submit="vm.addItem()">
-    <input ng-model="vm.name" placeholder="Name"/>
-    <input ng-model="vm.price" placeholder="Price"/>
-    <input ng-model="vm.description" placeholder="Description"/>
-    Is this on the breakfast menu?
-    <input ng-model="vm.isBreakfast" type="checkbox"/>
+        <input type="submit" value="Add" />
 
-    <input type="submit" value="Add"/>
-</form>
+    </form>
+</div>

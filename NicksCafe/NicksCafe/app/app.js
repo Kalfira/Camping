@@ -14,7 +14,11 @@
             templateUrl: '/app/views/add.html',
             controller: 'AddController',
             controllerAs: 'vm'
-        }).otherwise({
+        }).when('/login', {
+            templateUrl: '/app/views/login.html',
+            controller: 'LoginController',
+            controllerAs: 'vm'
+            }).otherwise({
             redirectTo: '/'
         });
     }
