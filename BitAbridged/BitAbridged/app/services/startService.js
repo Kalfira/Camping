@@ -1,11 +1,11 @@
 ﻿(function() {
     'use strict';
     angular.module('BitAbridged')
-        .factory("startService", startService);
+        .factory("languageService", languageService);
     
     var languages = [];
 
-    function startService($http, $q) {
+    function languageService($http, $q) {
         var service = {};
         var deferred = $q.defer();
 
@@ -21,7 +21,8 @@
                     });
 
                     deferred.resolve(languages);
-                }).error(function() {
+                }).error(function(result) {
+                    console.log(result);
                     deferred.reject();
                 });
         };
