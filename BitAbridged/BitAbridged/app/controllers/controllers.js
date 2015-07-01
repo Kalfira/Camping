@@ -5,6 +5,7 @@
         .controller("DetailsController", ['detailsService', '$routeParams', detailsController])
         .controller('AddController', ['addService', '$location', addController])
         .controller('LoginController', ['authService', '$location', loginController])
+        .controller('TemplateController', ['authService', '$scope', templateController])
         .controller('LogoutController', ['authService', logoutController]);
 
     function startController(languageService) {
@@ -46,15 +47,12 @@
 
     function loginController(authService, $location){
         var vm = this;
-
         vm.login = function() {
             authService.login(vm.username, vm.password).then(loginSuccess, loginFail);
         }
-
         function loginSuccess() {
             $location.path('/');
         }
-
         function loginFail() {
             console.log("Login Failed!");
         }
@@ -64,4 +62,20 @@
         authService.logout();
     }
 
+    function templateController(authService, $scope) {
+        $scope.isLoggedIn = function() {
+            if (authService.isLoggedIn()) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+        $scope.isLoggedOut = function() {
+            if (authService.isLoggedIn()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 })();

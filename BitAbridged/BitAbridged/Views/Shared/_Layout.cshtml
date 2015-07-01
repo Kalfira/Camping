@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container" ng-controller="TemplateController">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -21,9 +21,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" style="float: right;">
                     <li><a href="#/">Home</a></li>
-                        <li ng-hide="true"><a href="@Url.Action("Logout", "Home")">Logout</a></li>
-                        <li ng-hide="false"><a href="#/login">Login</a></li>
-                        <li><a href="#/add">Add</a></li>
+                        <li ng-hide="isLoggedIn()"><a href="#/logout">Logout</a></li>
+                        <li ng-hide="isLoggedOut()"><a href="#/login">Login</a></li>
+                        <li ng-hide="isLoggedIn()"><a href="#/add">Add</a></li>
                  </ul>
             </div>
         </div>
