@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BitAbridged.Models
 {
@@ -8,8 +7,6 @@ namespace BitAbridged.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public int DetailsId { get; set; }
-        [ForeignKey("DetailsId")]
-        public virtual Details Details { get; set; }
+
     }
 }

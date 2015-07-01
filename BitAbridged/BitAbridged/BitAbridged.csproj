@@ -224,6 +224,10 @@
     <Compile Include="Migrations\201506280122082_Details update.Designer.cs">
       <DependentUpon>201506280122082_Details update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506301632268_foreign key swap.cs" />
+    <Compile Include="Migrations\201506301632268_foreign key swap.Designer.cs">
+      <DependentUpon>201506301632268_foreign key swap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -244,9 +248,13 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\controllers.js" />
+    <Content Include="app\services\addService.js" />
     <Content Include="app\services\detailsService.js" />
+    <Content Include="app\services\authService.js" />
     <Content Include="app\services\startService.js" />
+    <Content Include="app\views\add.html" />
     <Content Include="app\views\details.html" />
+    <Content Include="app\views\login.html" />
     <Content Include="app\views\start.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
@@ -328,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506280122082_Details update.resx">
       <DependentUpon>201506280122082_Details update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506301632268_foreign key swap.resx">
+      <DependentUpon>201506301632268_foreign key swap.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

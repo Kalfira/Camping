@@ -22,6 +22,13 @@ namespace BitAbridged.Services
             return _repo.Query<Language>().ToList();
         }
 
+        public bool AddLanguage(Language lang)
+        {
+            _repo.Add(lang);
+            _repo.SaveChanges();
+            return true;
+        }
+
         public IList<Details> GetDetails()
         {
             return _repo.Query<Details>().ToList();

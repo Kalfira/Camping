@@ -28,5 +28,25 @@ namespace BitAbridged.Controllers.api
         {
             return _service.GetLanguages();
         }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public IHttpActionResult Add(Language lang)
+        {
+            if (ModelState.IsValid)
+            {
+                if (_service.AddLanguage(lang))
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest("Unable to add!");
+                }
+            }
+            else
+            {
+                return BadRequest("Model state is invalid");
+            }
+        }
     }
 }

@@ -28,25 +28,33 @@ namespace BitAbridged.Migrations
 
             if (!roleManager.RoleExists("User"))
                 roleManager.Create(new Role { Name = "User" });
+            ApplicationUser zane = userManager.FindByName("zdegner@gmail.com");
 
-            ApplicationUser user = new ApplicationUser
+            zane = new ApplicationUser
             {
                 Id = "1",
                 UserName = "admin",
                 Email = "zdegner@gmail.com"
             };
-
-            context.Users.AddOrUpdate(u => u.Id, user);
-            context.SaveChanges();
-            userManager.AddToRole(user.Id, "Admin");
-
-
+            userManager.Create(zane, "asdf3214");
+            userManager.AddToRole(zane.Id, "Admin");
+            List<Language> languages = new List<Language>()
+            {
+                new Language {Id = 1, Name = "C#"},
+                new Language {Id = 2, Name = "Python"},
+                new Language {Id = 3, Name = "Haskell"}
+            };
+            foreach (Language language in languages)
+            {
+                context.Languages.AddOrUpdate(l => l.Name, language);
+                context.SaveChanges();
+            }
 
             List<Details> details = new List<Details>
             {
-                new Details {Id = 1, Fact1 = "Compiled", Fact2 = "Kickass!"},
-                new Details {Id = 2, Fact1 = "Interpreted", Fact2 = "Weird Looking"},
-                new Details {Id = 3, Fact1 = "Functional", Fact2 = "For geniuses only, stay away!"}
+                new Details {Id = 1, Fact1 = "Compiled", Fact2 = "Kickass!", LanguageId = 1},
+                new Details {Id = 2, Fact1 = "Interpreted", Fact2 = "Weird Looking", LanguageId = 2},
+                new Details {Id = 3, Fact1 = "Functional", Fact2 = "For geniuses only, stay away!", LanguageId = 3}
             };
             foreach (Details detail in details)
             {
@@ -54,17 +62,7 @@ namespace BitAbridged.Migrations
                 context.SaveChanges();
             }
 
-            List<Language> languages = new List<Language>()
-            {
-                new Language {Id = 1, DetailsId = 1, Name = "C#"},
-                new Language {Id = 2, DetailsId = 2, Name = "Python"},
-                new Language {Id = 3, DetailsId = 3, Name = "Haskell"}
-            };
-            foreach (Language language in languages)
-            {
-                context.Languages.AddOrUpdate(l => l.Name, language);
-                context.SaveChanges();
-            }
+
         }
     }
 }

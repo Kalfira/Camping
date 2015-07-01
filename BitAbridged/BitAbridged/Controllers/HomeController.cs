@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -13,6 +11,14 @@ namespace BitAbridged.Controllers
             ViewBag.Title = "Home Page";
 
             return View();
+        }
+
+        public ActionResult Logout()
+        {
+            HttpCookie _cookie = new HttpCookie(".AspNet.Cookies");
+            _cookie.Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies.Add(_cookie);
+            return Redirect("~/#/logout");
         }
     }
 }
