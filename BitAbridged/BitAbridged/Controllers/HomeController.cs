@@ -13,6 +13,8 @@ namespace BitAbridged.Controllers
             return View();
         }
 
+
+        //Deprecated
         public ActionResult Logout()
         {
             HttpCookie _cookie = new HttpCookie(".AspNet.Cookies");

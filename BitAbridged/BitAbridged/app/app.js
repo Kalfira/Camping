@@ -22,7 +22,7 @@
         }).when('/logout', {
             templateUrl: '/app/views/start.html',
             controller: 'LogoutController',
-           redirectTo: '/'
+            redirectTo: '/'
         }).otherwise({
             redirectTo: '/'
         });
